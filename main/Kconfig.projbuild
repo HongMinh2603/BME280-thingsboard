@@ -50,7 +50,7 @@ config THINGSBOARD_PORT
 
 config THINGSBOARD_TOKEN
     string "ThingsBoard Access Token"
-    default "kFLmaH8ENYJWskCiFMIn"
+    default "___"
     help
         The access token for ThingsBoard authentication.
 

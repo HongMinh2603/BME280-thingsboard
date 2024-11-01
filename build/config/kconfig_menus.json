@@ -4564,6 +4564,44 @@
     {
         "children": [
             {
+                "children": [],
+                "depends_on": null,
+                "help": "The SSID (network name) for your WiFi connection.",
+                "id": "SSID",
+                "name": "SSID",
+                "range": null,
+                "title": "SSID",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "The password for your WiFi connection.",
+                "id": "PASS",
+                "name": "PASS",
+                "range": null,
+                "title": "PASS",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "The maximum number of retry attempts for WiFi connection.",
+                "id": "WIFI_MAXIMUM_RETRY",
+                "name": "WIFI_MAXIMUM_RETRY",
+                "range": null,
+                "title": "Maximum Retry Attempts",
+                "type": "int"
+            }
+        ],
+        "depends_on": null,
+        "id": "wifi-configuration",
+        "title": "WiFi Configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [
                     {
                         "children": [],

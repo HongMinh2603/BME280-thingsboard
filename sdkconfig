@@ -1,6 +1,6 @@
 #
 # Automatically generated file. DO NOT EDIT.
-# Espressif IoT Development Framework (ESP-IDF) 5.1.4 Project Configuration
+# Espressif IoT Development Framework (ESP-IDF)  Project Configuration
 #
 CONFIG_SOC_BROWNOUT_RESET_SUPPORTED="Not determined"
 CONFIG_SOC_TWAI_BRP_DIV_SUPPORTED="Not determined"
@@ -368,6 +368,14 @@ CONFIG_THINGSBOARD_PORT=1883
 CONFIG_THINGSBOARD_TOKEN="kFLmaH8ENYJWskCiFMIn"
 # end of ThingsBoard Configuration
 # end of Project Configuration
+
+#
+# WiFi Configuration
+#
+CONFIG_SSID="your_SSID"
+CONFIG_PASS="your_PASSWORD"
+CONFIG_WIFI_MAXIMUM_RETRY=5
+# end of WiFi Configuration
 
 #
 # Compiler options

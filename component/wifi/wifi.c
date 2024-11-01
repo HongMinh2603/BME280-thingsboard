@@ -1,8 +1,7 @@
 #include "wifi.h"
 
-#define SSID "Hiep"
-#define PASS "11111111"
-
+#define SSID CONFIG_SSID
+#define PASS CONFIG_PASS
 static const char *TAG = "wifi";
 
 void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data) {

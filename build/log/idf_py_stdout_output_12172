@@ -1,0 +1,8 @@
+[0/1] Re-running CMake...
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file D:/Espressif/frameworks/air_sense/sdkconfig
+-- Configuring incomplete, errors occurred!
+See also "D:/Espressif/frameworks/air_sense/build/CMakeFiles/CMakeOutput.log".
+FAILED: build.ninja 
+D:\Espressif\tools\cmake\3.24.0\bin\cmake.exe --regenerate-during-build -SD:\Espressif\frameworks\air_sense -BD:\Espressif\frameworks\air_sense\build

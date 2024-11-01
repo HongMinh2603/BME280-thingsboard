@@ -17,15 +17,12 @@ esp_mqtt_client_handle_t client;
 #define I2C_MASTER_FREQ_HZ CONFIG_I2C_MASTER_FREQ_HZ
 #define BME280_I2C_ADDRESS CONFIG_BME280_I2C_ADDRESS
 
-#define SSID CONFIG_WIFI_SSID
-#define PASS CONFIG_WIFI_PASSWORD
 #define THINGSBOARD_SERVER CONFIG_THINGSBOARD_SERVER
 #define THINGSBOARD_PORT CONFIG_THINGSBOARD_PORT
 #define THINGSBOARD_TOKEN CONFIG_THINGSBOARD_TOKEN
 #define THINGSBOARD_TOPIC "v1/devices/me/telemetry"
 
 static const char *TAG = "bme280_thingsboard";
-
 
 void app_main(void) {
     nvs_flash_init();
