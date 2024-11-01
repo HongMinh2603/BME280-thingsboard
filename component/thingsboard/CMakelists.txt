@@ -1,0 +1,5 @@
+set(app_src thingsboard.c)
+set(pre_req driver esp_common mqtt esp_wifi nvs_flash)
+idf_component_register(SRCS ${app_src}
+                    INCLUDE_DIRS "."
+                    REQUIRES ${pre_req})

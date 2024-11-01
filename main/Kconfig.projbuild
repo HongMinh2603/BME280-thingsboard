@@ -1,0 +1,59 @@
+menu "Project Configuration"
+
+menu "BME280 Configuration"
+
+config I2C_MASTER_SCL_IO
+    int "I2C Master SCL IO"
+    default 22
+    help
+        GPIO number used for I2C master clock.
+
+config I2C_MASTER_SDA_IO
+    int "I2C Master SDA IO"
+    default 21
+    help
+        GPIO number used for I2C master data.
+
+config I2C_MASTER_NUM
+    int "I2C Master Port Number"
+    default 0
+    help
+        I2C port number for master device.
+
+config I2C_MASTER_FREQ_HZ
+    int "I2C Master Clock Frequency"
+    default 100000
+    help
+        I2C master clock frequency in Hz.
+
+config BME280_I2C_ADDRESS
+    hex "BME280 I2C Address"
+    default 0x76
+    help
+        I2C address for BME280 sensor.
+
+endmenu
+
+menu "ThingsBoard Configuration"
+
+config THINGSBOARD_SERVER
+    string "ThingsBoard Server"
+    default "mqtt://thingsboard.cloud"
+    help
+        The server URL for ThingsBoard.
+
+config THINGSBOARD_PORT
+    int "ThingsBoard Port"
+    default 1883
+    help
+        The port for connecting to ThingsBoard.
+
+config THINGSBOARD_TOKEN
+    string "ThingsBoard Access Token"
+    default "kFLmaH8ENYJWskCiFMIn"
+    help
+        The access token for ThingsBoard authentication.
+
+endmenu
+
+endmenu

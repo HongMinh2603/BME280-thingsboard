@@ -1,0 +1,224 @@
+ts J��� v3.1[0m
+[0;�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7116
+ho 0 tail 12 room 4
+load:0x40078000,len:15624
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (33) boot: ESP-IDF v5.1.4-dirty 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Nov  1 2024 18:13:56[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (38) boot: chip revision: v3.1[0m
+[0;32mI (42) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (51) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (61) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (72) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (79) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot: End of partition table[0m
+[0;32mI (98) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=258c8h (153800) map[0m
+[0;32mI (162) esp_image: segment 1: paddr=000358f0 vaddr=3ffb0000 size=03c2ch ( 15404) load[0m
+[0;32mI (169) esp_image: segment 2: paddr=00039524 vaddr=40080000 size=06af4h ( 27380) load[0m
+[0;32mI (180) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9c2c0h (639680) map[0m
+[0;32mI (411) esp_image: segment 4: paddr=000dc2e8 vaddr=40086af4 size=109b4h ( 68020) load[0m
+[0;32mI (451) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (463) cpu_start: Pro cpu up.[0m
+[0;32mI (464) cpu_start: Starting app cpu, entry point is 0x40081498[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (481) cpu_start: Pro cpu start user code[0m
+[0;32mI (481) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (481) cpu_start: Application information:[0m
+[0;32mI (486) cpu_start: Project name:     air_sense[0m
+[0;32mI (491) cpu_start: App version:      1[0m
+[0;32mI (496) cpu_start: Compile time:     Nov  1 2024 18:13:40[0m
+[0;32mI (502) cpu_start: ELF file SHA256:  ebe0417935153181...[0m
+[0;32mI (508) cpu_start: ESP-IDF:          v5.1.4-dirty[0m
+[0;32mI (513) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (518) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (523) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (528) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (535) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (541) heap_init: At 3FFB82D0 len 00027D30 (159 KiB): DRAM[0m
+[0;32mI (547) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (553) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (560) heap_init: At 400974A8 len 00008B58 (34 KiB): IRAM[0m
+[0;32mI (567) spi_flash: detected chip: generic[0m
+[0;32mI (571) spi_flash: flash io: dio[0m
+[0;33mW (574) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (589) app_start: Starting scheduler on CPU0[0m
+[0;32mI (593) app_start: Starting scheduler on CPU1[0m
+[0;32mI (593) main_task: Started on CPU0[0m
+[0;32mI (603) main_task: Calling app_main()[0m
+I (653) wifi:wifi driver task: 3ffc0248, prio:23, stack:6656, core=0
+I (663) wifi:wifi firmware version: 3ce09e5
+I (673) wifi:wifi certification version: v7.0
+I (673) wifi:config NVS flash: enabled
+I (673) wifi:config nano formating: disabled
+I (673) wifi:Init data frame dynamic rx buffer num: 32
+I (673) wifi:Init static rx mgmt buffer num: 5
+I (683) wifi:Init management short buffer num: 32
+I (683) wifi:Init dynamic tx buffer num: 32
+I (693) wifi:Init static rx buffer size: 1600
+I (693) wifi:Init static rx buffer num: 10
+I (693) wifi:Init dynamic rx buffer num: 32
+[0;32mI (703) wifi_init: rx ba win: 6[0m
+[0;32mI (703) wifi_init: tcpip mbox: 32[0m
+[0;32mI (713) wifi_init: udp mbox: 6[0m
+[0;32mI (713) wifi_init: tcp mbox: 6[0m
+[0;32mI (713) wifi_init: tcp tx win: 5760[0m
+[0;32mI (723) wifi_init: tcp rx win: 5760[0m
+[0;32mI (723) wifi_init: tcp mss: 1440[0m
+[0;32mI (733) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (733) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (743) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+I (833) wifi:mode : sta (10:06:1c:86:c0:88)
+I (833) wifi:enable tsf
+[0;31mE (843) esp-tls: couldn't get hostname for :thingsboard.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (843) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (853) mqtt_client: Error transport connect[0m
+[0;32mI (853) mqtt_thingsboard: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (863) BME280: BME280 initialized successfully[0m
+[0;32mI (873) BME280: Temperature: 27.20 C, Pressure: 1008.99 hPa, Humidity: 56.67 %[0m
+Temperature: 27.20 C, Humidity: 56.67 %, Pressure: 1008.99 hPa
+[0;32mI (2883) BME280: Temperature: 27.21 C, Pressure: 1008.98 hPa, Humidity: 56.45 %[0m
+Temperature: 27.21 C, Humidity: 56.45 %, Pressure: 1008.98 hPa
+[0;32mI (3253) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (4883) BME280: Temperature: 27.24 C, Pressure: 1008.98 hPa, Humidity: 56.33 %[0m
+Temperature: 27.24 C, Humidity: 56.33 %, Pressure: 1008.98 hPa
+[0;32mI (5663) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (6883) BME280: Temperature: 27.25 C, Pressure: 1009.05 hPa, Humidity: 56.50 %[0m
+Temperature: 27.25 C, Humidity: 56.50 %, Pressure: 1009.05 hPa
+[0;32mI (8083) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (8883) BME280: Temperature: 27.26 C, Pressure: 1008.99 hPa, Humidity: 56.59 %[0m
+Temperature: 27.26 C, Humidity: 56.59 %, Pressure: 1008.99 hPa
+[0;32mI (10493) wifi: Disconnected. Connecting to the AP again...[0m
+[0;31mE (10863) esp-tls: couldn't get hostname for :thingsboard.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (10863) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (10863) mqtt_client: Error transport connect[0m
+[0;32mI (10873) mqtt_thingsboard: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (10883) BME280: Temperature: 27.25 C, Pressure: 1009.02 hPa, Humidity: 56.34 %[0m
+Temperature: 27.25 C, Humidity: 56.34 %, Pressure: 1009.02 hPa
+[0;32mI (12893) BME280: Temperature: 27.26 C, Pressure: 1009.10 hPa, Humidity: 56.20 %[0m
+Temperature: 27.26 C, Humidity: 56.20 %, Pressure: 1009.10 hPa
+[0;32mI (12913) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (14893) BME280: Temperature: 27.25 C, Pressure: 1009.05 hPa, Humidity: 56.08 %[0m
+Temperature: 27.25 C, Humidity: 56.08 %, Pressure: 1009.05 hPa
+[0;32mI (15323) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (16893) BME280: Temperature: 27.25 C, Pressure: 1009.02 hPa, Humidity: 56.07 %[0m
+Temperature: 27.25 C, Humidity: 56.07 %, Pressure: 1009.02 hPa
+[0;32mI (17743) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (18893) BME280: Temperature: 27.26 C, Pressure: 1009.07 hPa, Humidity: 56.16 %[0m
+Temperature: 27.26 C, Humidity: 56.16 %, Pressure: 1009.07 hPa
+[0;32mI (20153) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (20893) BME280: Temperature: 27.27 C, Pressure: 1009.08 hPa, Humidity: 56.06 %[0m
+Temperature: 27.27 C, Humidity: 56.06 %, Pressure: 1009.08 hPa
+[0;32mI (22573) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (22893) BME280: Temperature: 27.28 C, Pressure: 1009.02 hPa, Humidity: 56.02 %[0m
+Temperature: 27.28 C, Humidity: 56.02 %, Pressure: 1009.02 hPa
+[0;32mI (24893) BME280: Temperature: 27.32 C, Pressure: 1009.06 hPa, Humidity: 56.09 %[0m
+Temperature: 27.32 C, Humidity: 56.09 %, Pressure: 1009.06 hPa
+[0;32mI (24983) wifi: Disconnected. Connecting to the AP again...[0m
+[0;31mE (25873) esp-tls: couldn't get hostname for :thingsboard.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (25873) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (25873) mqtt_client: Error transport connect[0m
+[0;32mI (25883) mqtt_thingsboard: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (26893) BME280: Temperature: 27.32 C, Pressure: 1009.01 hPa, Humidity: 56.02 %[0m
+Temperature: 27.32 C, Humidity: 56.02 %, Pressure: 1009.01 hPa
+[0;32mI (27403) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (28893) BME280: Temperature: 27.35 C, Pressure: 1009.08 hPa, Humidity: 56.04 %[0m
+Temperature: 27.35 C, Humidity: 56.04 %, Pressure: 1009.08 hPa
+[0;32mI (29813) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (30893) BME280: Temperature: 27.34 C, Pressure: 1009.04 hPa, Humidity: 55.97 %[0m
+Temperature: 27.34 C, Humidity: 55.97 %, Pressure: 1009.04 hPa
+[0;32mI (32233) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (32893) BME280: Temperature: 27.35 C, Pressure: 1009.01 hPa, Humidity: 55.88 %[0m
+Temperature: 27.35 C, Humidity: 55.88 %, Pressure: 1009.01 hPa
+[0;32mI (34643) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (34893) BME280: Temperature: 27.37 C, Pressure: 1009.00 hPa, Humidity: 55.93 %[0m
+Temperature: 27.37 C, Humidity: 55.93 %, Pressure: 1009.00 hPa
+[0;32mI (36893) BME280: Temperature: 27.38 C, Pressure: 1009.03 hPa, Humidity: 55.87 %[0m
+Temperature: 27.38 C, Humidity: 55.87 %, Pressure: 1009.03 hPa
+[0;32mI (37063) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (38893) BME280: Temperature: 27.37 C, Pressure: 1009.04 hPa, Humidity: 55.74 %[0m
+Temperature: 27.37 C, Humidity: 55.74 %, Pressure: 1009.04 hPa
+[0;32mI (39473) wifi: Disconnected. Connecting to the AP again...[0m
+[0;31mE (40883) esp-tls: couldn't get hostname for :thingsboard.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (40883) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (40883) mqtt_client: Error transport connect[0m
+[0;32mI (40893) mqtt_thingsboard: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (40893) BME280: Temperature: 27.41 C, Pressure: 1009.05 hPa, Humidity: 55.98 %[0m
+Temperature: 27.41 C, Humidity: 55.98 %, Pressure: 1009.05 hPa
+[0;32mI (41893) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (42913) BME280: Temperature: 27.41 C, Pressure: 1009.05 hPa, Humidity: 56.20 %[0m
+Temperature: 27.41 C, Humidity: 56.20 %, Pressure: 1009.05 hPa
+[0;32mI (44303) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (44913) BME280: Temperature: 27.40 C, Pressure: 1009.06 hPa, Humidity: 56.00 %[0m
+Temperature: 27.40 C, Humidity: 56.00 %, Pressure: 1009.06 hPa
+[0;32mI (46723) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (46913) BME280: Temperature: 27.40 C, Pressure: 1009.06 hPa, Humidity: 56.09 %[0m
+Temperature: 27.40 C, Humidity: 56.09 %, Pressure: 1009.06 hPa
+[0;32mI (48913) BME280: Temperature: 27.41 C, Pressure: 1009.02 hPa, Humidity: 56.13 %[0m
+Temperature: 27.41 C, Humidity: 56.13 %, Pressure: 1009.02 hPa
+[0;32mI (49133) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (50913) BME280: Temperature: 27.40 C, Pressure: 1009.06 hPa, Humidity: 56.10 %[0m
+Temperature: 27.40 C, Humidity: 56.10 %, Pressure: 1009.06 hPa
+[0;32mI (51543) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (52913) BME280: Temperature: 27.41 C, Pressure: 1009.00 hPa, Humidity: 55.97 %[0m
+Temperature: 27.41 C, Humidity: 55.97 %, Pressure: 1009.00 hPa
+[0;32mI (53963) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (54913) BME280: Temperature: 27.41 C, Pressure: 1009.05 hPa, Humidity: 56.04 %[0m
+Temperature: 27.41 C, Humidity: 56.04 %, Pressure: 1009.05 hPa
+[0;31mE (55893) esp-tls: couldn't get hostname for :thingsboard.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (55893) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (55893) mqtt_client: Error transport connect[0m
+[0;32mI (55903) mqtt_thingsboard: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (56373) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (56913) BME280: Temperature: 27.40 C, Pressure: 1009.04 hPa, Humidity: 55.81 %[0m
+Temperature: 27.40 C, Humidity: 55.81 %, Pressure: 1009.04 hPa
+[0;32mI (58793) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (58913) BME280: Temperature: 27.41 C, Pressure: 1009.05 hPa, Humidity: 55.74 %[0m
+Temperature: 27.41 C, Humidity: 55.74 %, Pressure: 1009.05 hPa
+[0;32mI (60913) BME280: Temperature: 27.42 C, Pressure: 1009.03 hPa, Humidity: 55.78 %[0m
+Temperature: 27.42 C, Humidity: 55.78 %, Pressure: 1009.03 hPa
+[0;32mI (61203) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (62913) BME280: Temperature: 27.44 C, Pressure: 1009.07 hPa, Humidity: 55.72 %[0m
+Temperature: 27.44 C, Humidity: 55.72 %, Pressure: 1009.07 hPa
+[0;32mI (63623) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (64913) BME280: Temperature: 27.46 C, Pressure: 1009.06 hPa, Humidity: 55.65 %[0m
+Temperature: 27.46 C, Humidity: 55.65 %, Pressure: 1009.06 hPa
+[0;32mI (66033) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (66913) BME280: Temperature: 27.45 C, Pressure: 1009.12 hPa, Humidity: 55.61 %[0m
+Temperature: 27.45 C, Humidity: 55.61 %, Pressure: 1009.12 hPa
+[0;32mI (68453) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (68913) BME280: Temperature: 27.45 C, Pressure: 1009.04 hPa, Humidity: 55.63 %[0m
+Temperature: 27.45 C, Humidity: 55.63 %, Pressure: 1009.04 hPa
+[0;32mI (70863) wifi: Disconnected. Connecting to the AP again...[0m
+[0;31mE (70903) esp-tls: couldn't get hostname for :thingsboard.cloud: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (70903) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (70903) mqtt_client: Error transport connect[0m
+[0;32mI (70913) mqtt_thingsboard: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (70913) BME280: Temperature: 27.46 C, Pressure: 1009.05 hPa, Humidity: 55.60 %[0m
+Temperature: 27.46 C, Humidity: 55.60 %, Pressure: 1009.05 hPa
+[0;32mI (72933) BME280: Temperature: 27.47 C, Pressure: 1009.05 hPa, Humidity: 55.58 %[0m
+Temperature: 27.47 C, Humidity: 55.58 %, Pressure: 1009.05 hPa
+[0;32mI (73283) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (74933) BME280: Temperature: 27.48 C, Pressure: 1009.09 hPa, Humidity: 55.54 %[0m
+Temperature: 27.48 C, Humidity: 55.54 %, Pressure: 1009.09 hPa
+[0;32mI (75693) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (76933) BME280: Temperature: 27.48 C, Pressure: 1009.05 hPa, Humidity: 55.41 %[0m
+Temperature: 27.48 C, Humidity: 55.41 %, Pressure: 1009.05 hPa
+[0;32mI (78103) wifi: Disconnected. Connecting to the AP again...[0m
+[0;32mI (78933) BME280: Temperature: 27.49 C, Pressure: 1009.07 hPa, Humidity: 55.39 %[0m
+Temperature: 27.49 C, Humidity: 55.39 %, Pressure: 1009.07 hPa

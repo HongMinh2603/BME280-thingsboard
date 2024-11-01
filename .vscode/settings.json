@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "wifi.h": "c",
+        "bme280.h": "c",
+        "thingsboard.h": "c"
+    }
+}
