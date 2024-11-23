@@ -628,6 +628,13 @@ D:/Espressif/frameworks/air_sense/build/esp-idf/bme280/CMakeFiles/list_install_c
 D:/Espressif/frameworks/air_sense/build/esp-idf/bme280/CMakeFiles/install.dir
 D:/Espressif/frameworks/air_sense/build/esp-idf/bme280/CMakeFiles/install/local.dir
 D:/Espressif/frameworks/air_sense/build/esp-idf/bme280/CMakeFiles/install/strip.dir
+D:/Espressif/frameworks/air_sense/build/esp-idf/pms7003/CMakeFiles/__idf_pms7003.dir
+D:/Espressif/frameworks/air_sense/build/esp-idf/pms7003/CMakeFiles/edit_cache.dir
+D:/Espressif/frameworks/air_sense/build/esp-idf/pms7003/CMakeFiles/rebuild_cache.dir
+D:/Espressif/frameworks/air_sense/build/esp-idf/pms7003/CMakeFiles/list_install_components.dir
+D:/Espressif/frameworks/air_sense/build/esp-idf/pms7003/CMakeFiles/install.dir
+D:/Espressif/frameworks/air_sense/build/esp-idf/pms7003/CMakeFiles/install/local.dir
+D:/Espressif/frameworks/air_sense/build/esp-idf/pms7003/CMakeFiles/install/strip.dir
 D:/Espressif/frameworks/air_sense/build/esp-idf/thingsboard/CMakeFiles/__idf_thingsboard.dir
 D:/Espressif/frameworks/air_sense/build/esp-idf/thingsboard/CMakeFiles/edit_cache.dir
 D:/Espressif/frameworks/air_sense/build/esp-idf/thingsboard/CMakeFiles/rebuild_cache.dir

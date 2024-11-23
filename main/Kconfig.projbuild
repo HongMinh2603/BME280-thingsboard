@@ -56,4 +56,42 @@ config THINGSBOARD_TOKEN
 
 endmenu
 
+menu "PMS7003 Configuration"
+
+config PMS7003_UART_BAUD_RATE
+    int "UART baud rate"
+    default 9600
+    help
+        The UART baud rate for communicating with the PMS7003 sensor.
+
+config PMS7003_UART_RX_PIN
+    int "UART RX pin"
+    default 16
+    help
+        The RX pin of the UART for communicating with the PMS7003 sensor.
+
+config PMS7003_UART_TX_PIN
+    int "UART TX pin"
+    default 17
+    help
+        The TX pin of the UART for communicating with the PMS7003 sensor.
+config IN_ATMOSPHERIC_MODE
+    bool "Is in atmospheric mode"
+    default y
+    help
+        Enable this option if the PMS7003 sensor should operate in atmospheric mode.
+
+endmenu
+
+menu "Time Configuration" 
+
+config TIME_DELAY_MS
+    int "Time delay"
+    default 5000
+    help
+        Repeat time in milliseconds.
+
+endmenu
+
+
 endmenu

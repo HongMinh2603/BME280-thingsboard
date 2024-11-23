@@ -61,5 +61,6 @@ D:/Espressif/frameworks/air_sense/build/esp-idf/spiffs/libspiffs.a
 D:/Espressif/frameworks/air_sense/build/esp-idf/wifi_provisioning/libwifi_provisioning.a
 D:/Espressif/frameworks/air_sense/build/esp-idf/main/libmain.a
 D:/Espressif/frameworks/air_sense/build/esp-idf/bme280/libbme280.a
+D:/Espressif/frameworks/air_sense/build/esp-idf/pms7003/libpms7003.a
 D:/Espressif/frameworks/air_sense/build/esp-idf/thingsboard/libthingsboard.a
 D:/Espressif/frameworks/air_sense/build/esp-idf/wifi/libwifi.a

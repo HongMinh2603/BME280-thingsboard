@@ -10,7 +10,6 @@
 
 static const char *TAG = "BME280";
 
-// Calibration parameters
 uint16_t dig_T1;
 int16_t dig_T2;
 int16_t dig_T3;
@@ -30,13 +29,12 @@ int16_t dig_H4;
 int16_t dig_H5;
 int8_t dig_H6;
 
-static int32_t t_fine; // Declare t_fine here
+static int32_t t_fine; 
 
 static esp_err_t read_register(i2c_port_t i2c_port, uint8_t i2c_addr, uint8_t reg_addr, uint8_t *data, size_t len) {
     i2c_cmd_handle_t cmd = i2c_cmd_link_create();
     esp_err_t ret;
 
-    // Start transmission
     i2c_master_start(cmd);
     i2c_master_write_byte(cmd, (i2c_addr << 1) | I2C_MASTER_WRITE, true);
     i2c_master_write_byte(cmd, reg_addr, true);
@@ -45,7 +43,6 @@ static esp_err_t read_register(i2c_port_t i2c_port, uint8_t i2c_addr, uint8_t re
     i2c_master_read(cmd, data, len, I2C_MASTER_LAST_NACK);
     i2c_master_stop(cmd);
     
-    // Execute command
     ret = i2c_master_cmd_begin(i2c_port, cmd, pdMS_TO_TICKS(1000));
     i2c_cmd_link_delete(cmd);
     return ret;
@@ -69,8 +66,8 @@ static uint32_t compensate_pressure(int32_t adc_P) {
     var1 = ((var1 * var1 * (int64_t)dig_P3) >> 8) + ((var1 * (int64_t)dig_P2) << 12);
     var1 = (((((int64_t)1) << 47) + var1)) * ((int64_t)dig_P1) >> 33;
     if (var1 == 0) {
-        return 0;  // avoid exception caused by division by zero
-    }
+        return 0;  
+  }
     p = 1048576 - adc_P;
     p = (((p << 31) - var2) * 3125) / var1;
     var1 = (((int64_t)dig_P9) * (p >> 13) * (p >> 13)) >> 25;
@@ -94,8 +91,7 @@ static uint32_t compensate_humidity(int32_t adc_H) {
 
 esp_err_t bme280_init(i2c_port_t i2c_port, uint8_t i2c_addr) {
     uint8_t calib_data[BME280_TEMP_PRESS_CALIB_DATA_LEN];
-    esp_err_t err; // Declare 'err' only once
-
+    esp_err_t err; 
     err = read_register(i2c_port, i2c_addr, 0x88, calib_data, BME280_TEMP_PRESS_CALIB_DATA_LEN);
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "Failed to read calibration data from BME280: %d", err);
@@ -129,28 +125,25 @@ esp_err_t bme280_init(i2c_port_t i2c_port, uint8_t i2c_addr) {
     dig_H5 = (calib_data_h[5] << 4) | (calib_data_h[4] >> 4);
     dig_H6 = calib_data_h[6];
 
-    // Configuration for humidity
     uint8_t config_data[2];
     config_data[0] = 0xF2;
-    config_data[1] = 0x01;  // Humidity oversampling x1
+    config_data[1] = 0x01;  
     err = i2c_master_write_to_device(i2c_port, i2c_addr, config_data, sizeof(config_data), pdMS_TO_TICKS(1000));
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "Failed to configure BME280: %d", err);
         return err;
     }
 
-    // Configuration for temperature and pressure
     config_data[0] = 0xF4;
-    config_data[1] = 0x27;  // Pressure and temperature oversampling x1, mode normal
+    config_data[1] = 0x27;  
     err = i2c_master_write_to_device(i2c_port, i2c_addr, config_data, sizeof(config_data), pdMS_TO_TICKS(1000));
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "Failed to configure BME280: %d", err);
         return err;
     }
 
-    // Configuration for standby time and filter
     config_data[0] = 0xF5;
-    config_data[1] = 0xA0;  // Standby time 1000 ms, filter off
+    config_data[1] = 0xA0;  
     err = i2c_master_write_to_device(i2c_port, i2c_addr, config_data, sizeof(config_data), pdMS_TO_TICKS(1000));
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "Failed to configure BME280: %d", err);
@@ -173,7 +166,6 @@ esp_err_t bme280_read_data(i2c_port_t i2c_port, uint8_t i2c_addr, bme280_data_t 
     int32_t adc_P = (int32_t)(((uint32_t)(raw_data[0]) << 12) | ((uint32_t)(raw_data[1]) << 4) | ((uint32_t)(raw_data[2]) >> 4));
     int32_t adc_H = (int32_t)((raw_data[6] << 8) | raw_data[7]);
 
-    // Apply compensation formulas
     data->temperature = compensate_temperature(adc_T) / 100.0;
     data->pressure = compensate_pressure(adc_P) / 25600.0;
     data->humidity = compensate_humidity(adc_H) / 1024.0;

@@ -4554,6 +4554,72 @@
                 "id": "project-configuration-thingsboard-configuration",
                 "title": "ThingsBoard Configuration",
                 "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "The UART baud rate for communicating with the PMS7003 sensor.",
+                        "id": "PMS7003_UART_BAUD_RATE",
+                        "name": "PMS7003_UART_BAUD_RATE",
+                        "range": null,
+                        "title": "UART baud rate",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "The RX pin of the UART for communicating with the PMS7003 sensor.",
+                        "id": "PMS7003_UART_RX_PIN",
+                        "name": "PMS7003_UART_RX_PIN",
+                        "range": null,
+                        "title": "UART RX pin",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "The TX pin of the UART for communicating with the PMS7003 sensor.",
+                        "id": "PMS7003_UART_TX_PIN",
+                        "name": "PMS7003_UART_TX_PIN",
+                        "range": null,
+                        "title": "UART TX pin",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Enable this option if the PMS7003 sensor should operate in atmospheric mode.",
+                        "id": "IN_ATMOSPHERIC_MODE",
+                        "name": "IN_ATMOSPHERIC_MODE",
+                        "range": null,
+                        "title": "Is in atmospheric mode",
+                        "type": "bool"
+                    }
+                ],
+                "depends_on": null,
+                "id": "project-configuration-pms7003-configuration",
+                "title": "PMS7003 Configuration",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Repeat time in milliseconds.",
+                        "id": "TIME_DELAY_MS",
+                        "name": "TIME_DELAY_MS",
+                        "range": null,
+                        "title": "Time delay",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": null,
+                "id": "project-configuration-time-configuration",
+                "title": "Time Configuration",
+                "type": "menu"
             }
         ],
         "depends_on": null,

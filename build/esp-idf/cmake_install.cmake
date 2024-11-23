@@ -414,6 +414,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("D:/Espressif/frameworks/air_sense/build/esp-idf/pms7003/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("D:/Espressif/frameworks/air_sense/build/esp-idf/thingsboard/cmake_install.cmake")
 endif()
 
